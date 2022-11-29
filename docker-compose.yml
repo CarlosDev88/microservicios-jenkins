@@ -16,13 +16,13 @@ services:
     networks:
       - proyectos
 
-  load-balancer:
-    container_name: "load-balancer"
-    image: load-balancer:v1
+  load-balancer-proyect:
+    container_name: "load-balancer-proyect"
+    image: load-balancer-proyect:v1
     build:
       context: ./load-balancer
     ports:
-      - "8082:80"
+      - "6046:80"
     networks:
       - proyectos
     depends_on:
